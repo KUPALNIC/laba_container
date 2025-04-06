@@ -1,5 +1,7 @@
+#ifndef SUBVECTOR_H
+#define SUBVECTOR_H
+
 #include <iostream>
-using namespace std;
 
 class subvector {
 protected:
@@ -15,6 +17,12 @@ public:
         mas = nullptr;
         top = 0;
         capacity = 0;
+    }
+    int size(){
+      return top;
+    }
+    int capasity(){
+      return capacity;
     }
 
     void push_back(int n) {
@@ -61,25 +69,32 @@ public:
         }
     }
 
-    void show_parameters() {
-        cout << "Parameters:" << endl;
-        cout << "top: " << top << endl;
-        cout << "capacity: " << capacity << endl;
-    }
-
     class iterator {
-    private:
-        int* ptr;
     public:
+        int* ptr;
         iterator(int* p) : ptr(p) {}
         
         int& operator*() { return *ptr; }
         iterator& operator++() { ptr++; return *this; }
         iterator operator++(int) { iterator temp = *this; ++(*this); return temp; }
         bool operator!=(const iterator& t) const { return ptr != t.ptr; }
+        iterator operator+(unsigned int n) const { return iterator(ptr + n); }
     };
 
     iterator begin() { return iterator(mas); }
     iterator end() { return iterator(mas + top); }
+
+    void insert(iterator pos, int n) {
+        unsigned int index = pos.ptr - mas;
+        if (top == capacity) {
+            resize(capacity == 0 ? 1 : capacity * 2);
+        }
+        for (unsigned int i = top; i > index; --i) {
+            mas[i] = mas[i - 1];
+        }
+        mas[index] = n;
+        ++top;
+    }
 };
 
+#endif // SUBVECTOR_H
