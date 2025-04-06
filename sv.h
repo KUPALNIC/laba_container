@@ -95,6 +95,14 @@ public:
         mas[index] = n;
         ++top;
     }
+
+    void erase(iterator pos) {
+        unsigned int index = pos.ptr - mas;
+        for (unsigned int i = index; i < top - 1; ++i) {
+            mas[i] = mas[i + 1];
+        }
+        --top;
+    }
 };
 
 #endif // SUBVECTOR_H

@@ -4,8 +4,5 @@ project(laba_container)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(laba_container
-#    sublist.cpp
-#    subvector.cpp
-#        0/push_back.cpp
-        1/1.cpp
-        sv.h)
+        subforwardlist.h
+        4/4.cpp)
