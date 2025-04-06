@@ -46,7 +46,7 @@ int main() {
         double avg_std_vector_time = average_insert_time(size, true);
         double avg_sub_vector_time = average_insert_time(size, false);
 
-        // std::cout << "Size: " << size << " | std::vector: " << avg_std_vector_time << " us | subvector: " << avg_sub_vector_time << " us" << std::endl;
+        std::cout << "Size: " << size << " | std::vector: " << avg_std_vector_time << " us | subvector: " << avg_sub_vector_time << " us" << std::endl;
 
         outfile << size << " " << avg_std_vector_time << " " << avg_sub_vector_time << "\n";
     }

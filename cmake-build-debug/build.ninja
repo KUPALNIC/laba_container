@@ -49,11 +49,11 @@ cmake_ninja_workdir = /home/kupalnic/CLionProjects/laba_container/cmake-build-de
 
 build cmake_object_order_depends_target_laba_container: phony || .
 
-build CMakeFiles/laba_container.dir/4/4.cpp.o: CXX_COMPILER__laba_container_unscanned_Debug /home/kupalnic/CLionProjects/laba_container/4/4.cpp || cmake_object_order_depends_target_laba_container
-  DEP_FILE = CMakeFiles/laba_container.dir/4/4.cpp.o.d
-  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+build CMakeFiles/laba_container.dir/6/6.cpp.o: CXX_COMPILER__laba_container_unscanned_Debug /home/kupalnic/CLionProjects/laba_container/6/6.cpp || cmake_object_order_depends_target_laba_container
+  DEP_FILE = CMakeFiles/laba_container.dir/6/6.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/laba_container.dir
-  OBJECT_FILE_DIR = CMakeFiles/laba_container.dir/4
+  OBJECT_FILE_DIR = CMakeFiles/laba_container.dir/6
 
 
 # =============================================================================
@@ -63,7 +63,7 @@ build CMakeFiles/laba_container.dir/4/4.cpp.o: CXX_COMPILER__laba_container_unsc
 #############################################
 # Link the executable laba_container
 
-build laba_container: CXX_EXECUTABLE_LINKER__laba_container_Debug CMakeFiles/laba_container.dir/4/4.cpp.o
+build laba_container: CXX_EXECUTABLE_LINKER__laba_container_Debug CMakeFiles/laba_container.dir/6/6.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/laba_container.dir
   POST_BUILD = :
